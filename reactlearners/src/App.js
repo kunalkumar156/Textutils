@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
@@ -29,6 +29,18 @@ function App() {
       showAlert("Light mode has been enabled", "success : ");
     }
   };
+
+  // const toggleModePink = () => {
+  //   if (mode === "light") {
+  //     setMode("Pink");
+  //     document.body.style.backgroundColor = "#F2B6FA";
+  //     showAlert("Pink mode has been enabled", "success : ");
+  //   } else {
+  //     setMode("light");
+  //     document.body.style.backgroundColor = "white";
+  //     showAlert("Light mode has been enabled", "success : ");
+  //   }
+  // };
   return (
     <>
       <Navbar
@@ -37,14 +49,15 @@ function App() {
         mode={mode}
         toggleMode={toggleMode}
       />
+
       <Alert alert={alert} />
       <div className="container my-3">
-        <TextForm
+        {/* <TextForm
           showAlert={showAlert}
           heading="Enter the text to analyze below"
           mode={mode}
-        />
-        {/* <About /> */}
+        /> */}
+        <About />
       </div>
     </>
   );

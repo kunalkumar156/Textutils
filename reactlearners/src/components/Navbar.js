@@ -34,7 +34,7 @@ export default function Navbar(props) {
               </a>
             </li>
           </ul>
-          <form className="d-flex mx-2" role="search">
+          {/* <form className="d-flex mx-2" role="search">
             <input
               className="form-control me-2"
               type="search"
@@ -44,7 +44,31 @@ export default function Navbar(props) {
             <button className="btn btn-outline-success" type="submit">
               Search
             </button>
-          </form>
+          </form> */}
+
+          {/* Pink Mode */}
+
+          {/* <div
+            className={`form-check form-switch text-${
+              props.mode === "light" ? "pink" : "light"
+            }`}
+          >
+            <input
+              onClick={props.toggleModePink}
+              className="form-check-input mx-0"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
+            <label
+              className="form-check-label mx-2"
+              htmlFor="flexSwitchCheckDefault"
+            >
+              Enable Pink Mode
+            </label>
+          </div>  */}
+
+          {/* Dark Mode */}
           <div
             className={`form-check form-switch text-${
               props.mode === "light" ? "dark" : "light"
@@ -61,27 +85,7 @@ export default function Navbar(props) {
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault"
             >
-              Eable Dark Mode
-            </label>
-
-            {/* Pink mode */}
-            <div
-              className={`form-check form-switch text-${
-                props.mode === "light" ? "dark" : "light"
-              }`}
-            ></div>
-            <input
-              onClick={props.toggleMode}
-              className="form-check-input"
-              type="checkbox"
-              role="switch"
-              id="flexSwitchCheckDefault"
-            />
-            <label
-              className="form-check-label"
-              htmlFor="flexSwitchCheckDefault"
-            >
-              Eable Pink Mode
+              Enable Dark Mode
             </label>
           </div>
         </div>
